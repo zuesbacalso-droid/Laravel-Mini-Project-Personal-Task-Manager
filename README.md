@@ -9,3 +9,4 @@ Features:
 - Edit Task
 - Delete Task
 - Update Status
+- Dashboard
