@@ -309,6 +309,17 @@ body::before {
             .page-title h1 {
                 font-size: 27px;
             }
+            /*Calendar picker*/
+            input[type="date"] {
+    color: #ffffff;
+    background-color: #111827;
+    color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
         }
     </style>
 </head>
