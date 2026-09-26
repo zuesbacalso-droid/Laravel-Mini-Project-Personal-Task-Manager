@@ -317,7 +317,8 @@ body::before {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+    filter: brightness(0) invert(1);
+    opacity: 1;
     cursor: pointer;
 }
         }
