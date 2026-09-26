@@ -14,14 +14,30 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background:
-                radial-gradient(circle at top right, rgba(0, 102, 255, 0.15), transparent 35%),
-                radial-gradient(circle at bottom left, rgba(0, 102, 255, 0.08), transparent 30%),
-                #05070b;
-            color: #ffffff;
-            min-height: 100vh;
-        }
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #05070b;
+    background-image:
+        linear-gradient(rgba(3, 5, 20, 0.55), rgba(3, 5, 20, 0.75)),
+        url('/images/background.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    min-height: 100vh;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(3, 5, 20, 0.55), rgba(3, 5, 20, 0.75)),
+        url('/images/background.png') center / cover no-repeat;
+    z-index: -1;
+    pointer-events: none;
+}
 
         /* NAVIGATION */
 
