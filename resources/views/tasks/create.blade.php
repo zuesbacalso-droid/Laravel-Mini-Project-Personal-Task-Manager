@@ -107,21 +107,31 @@
             </div>
 
 
-            <div class="form-group">
+            <div class="form-group date-group">
+    <label for="due_date">
+        Due Date
+    </label>
 
-                <label for="due_date">
-                    Due Date
-                </label>
+    <input
+        type="date"
+        id="due_date"
+        name="due_date"
+        value="{{ old('due_date') }}">
 
-                <input
-                    type="date"
-                    id="due_date"
-                    name="due_date"
-                    value="{{ old('due_date') }}">
-
-            </div>
-
-        </div>
+    <span class="date-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="18" height="17" rx="2"
+                  stroke="white" stroke-width="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"
+                  stroke="white" stroke-width="2"/>
+            <line x1="8" y1="2" x2="8" y2="6"
+                  stroke="white" stroke-width="2"/>
+            <line x1="3" y1="10" x2="21" y2="10"
+                  stroke="white" stroke-width="2"/>
+        </svg>
+    </span>
+</div>
 
 
         <div class="form-actions">
@@ -276,7 +286,23 @@
 
         transition: 0.25s ease;
     }
+.date-group {
+    position: relative;
+}
 
+.date-icon {
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.date-group input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+}
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {
