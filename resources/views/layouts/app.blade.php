@@ -310,16 +310,34 @@ body::before {
                 font-size: 27px;
             }
             /*Calendar picker*/
-            input[type="date"] {
-    color: #ffffff;
-    background-color: #111827;
-    color-scheme: dark;
+           .form-group select {
+    cursor: pointer;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: brightness(0) invert(1);
-    opacity: 1;
+.form-group input[type="date"] {
+    color: #ffffff;
+    color-scheme: dark;
+    position: relative;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
     cursor: pointer;
+    width: 35px;
+    height: 100%;
+}
+
+.form-group:has(input[type="date"]) {
+    position: relative;
+}
+
+.form-group:has(input[type="date"])::after {
+    content: "📅";
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
+    font-size: 20px;
+    pointer-events: none;
 }
         }
     </style>
