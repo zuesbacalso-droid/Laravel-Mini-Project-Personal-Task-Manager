@@ -10,7 +10,7 @@ Database Used: MySQL
 
 Features:
 - Add Task
-- View Tasks
+- View Tasks/Dashboard
 - Edit Task
 - Delete Task
 - Update Status
